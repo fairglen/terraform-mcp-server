@@ -1,5 +1,9 @@
 # 1.4.2
 
+IMPROVEMENTS
+
+* Harden CI workflows by updating `actions/checkout` to v7.0.1, which blocks unsafe fork checkouts in privileged workflow contexts, and `dorny/paths-filter` to v4.0.3, which safely escapes multiline filenames in file-list outputs. Other workflow actions now use their current Node.js 24-compatible releases, and artifact uploads include improved rate-limit retry handling.
+
 FIXES
 
 * `search_modules` now returns its "no modules found" message when the registry returns no matches, instead of reporting that it failed to parse the results.
